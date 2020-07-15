@@ -16,6 +16,7 @@ export function userReducers(state = initialState, action) {
             }
         case userConstants.LOGIN_FAIL:
             return {}
+
         default:
             return state
     }

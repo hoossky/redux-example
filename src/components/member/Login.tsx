@@ -12,13 +12,23 @@ class Login extends Component<any, any>{
             name: '',
             submitted: false
         }
-
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
     }
     handleChange(e){
         const {name, value} = e.target
         this.setState({[name]: value})
+                            /* {[name]: value} = key 값
+                               {name: value} = "name" */
+        /*
+        inputChangeHandler: function(event) {
+          var key = event.target.id
+          var val = event.target.value
+          var obj  = {}
+          obj[key] = val
+          this.setState(obj)
+        },
+        */
     }
     handleSubmit(e){
         e.preventDefault()
@@ -74,8 +84,32 @@ function mapStateToProps(state) {
     const { loggingIn } = state.userReducers
     return { loggingIn}
 }
+
 const actionCreators = {
     login: userActions.login
 }
 const connectedLoginPage = connect(mapStateToProps, actionCreators)(Login)
 export {connectedLoginPage as Login}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
