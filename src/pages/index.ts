@@ -1,2 +1,2 @@
-export {default as Counter} from './Counter'
+export { default as Counter } from './SimpleCounter'
 export {default as Member} from './Member'
